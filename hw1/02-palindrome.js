@@ -11,17 +11,25 @@ const handleInput = () => {
     // Empty input
     if (value === "") {
         resultDiv.textContent = "";
+        resultDiv.className = "";
         return;
     }
 
     // Checks for non-negative numbers
-    if (Number(value) < 0) {
+    if (value < 0) {
         resultDiv.textContent = "Non-negative numbers only!";
+        resultDiv.className = "text-warning";
         return;
     }
 
     // Palindrome check
-    resultDiv.textContent = isPalindrome(value) ? "Yes!" : "No 😭";
+    if (isPalindrome(value)) {
+        resultDiv.textContent = "Yes!";
+        resultDiv.className = "text-success";
+    } else {
+        resultDiv.textContent = "No 😭";
+        resultDiv.className = "text-danger";
+    }
 };
 
 // Event listener for live input checking
