@@ -6,13 +6,13 @@
 
 2. Download [VS Code](https://code.visualstudio.com/) as your code editor.
 
-   - Set Up VS Code to [launch from the command line](https://code.visualstudio.com/docs/editor/command-line#_launching-from-command-line).
+    - Set Up VS Code to [launch from the command line](https://code.visualstudio.com/docs/editor/command-line#_launching-from-command-line).
 
-   - I recommend installing the following extensions to start with:
-     - Git Lens
-     - Live Server
-     - Prettier
-     - ESLint
+    - I recommend installing the following extensions to start with:
+        - Git Lens
+        - Live Server
+        - Prettier
+        - ESLint
 
 3. Sign up for a GitHub account and the [GitHub Student Pack](https://education.github.com/pack).
 
@@ -20,7 +20,7 @@
 
 ### Setting up the Homework Repository
 
-There are two options for setting up your homework assignment. You can either use the GitHub option to "fork" the frontend-homework repository into a public repository or you can clone the frontend-homework repository and set up a private repository.
+There are two options for setting up your homework assignment. You can either use the GitHub option to "fork" the frontend-homework repository into a public repository, or you can clone the frontend-homework repository and set up a private repository.
 
 #### Option 1
 
@@ -86,7 +86,7 @@ remote: Resolving deltas: 100% (1/1), done.
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 ```
 
-7. To make any changes, create a branch and push those changes wihtin that branch on the remote.
+7. To make any changes, create a branch and push those changes within that branch on the remote.
 
 #### Option 2
 
@@ -140,17 +140,17 @@ $ git commit -m <commitmessage>
 $ git push <remote> <branchname>
 ```
 
-4. When your code is pushed to the remote, you will see a link to the PR in the commnand line. Alternatively, you can open the remote repository on GitHub and search for your PR in the "Pull requests" tab.
+4. When your code is pushed to the remote, you will see a link to the PR in the command line. Alternatively, you can open the remote repository on GitHub and search for your PR in the "Pull requests" tab.
 
 5. Add all students from your Canvas discussion group as reviewers on the pull request.
 
-   In the description textarea, make sure to explain what changes you made, why you made those changes, and what feedback you are looking for in the code reviews.
+    In the description textarea, make sure to explain what changes you made, why you made those changes, and what feedback you are looking for in the code reviews.
 
 ### Required Reading
 
-- Use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) for all JavaScript code submitted.
-- [How to Create a Pull Request | GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-- [How to write the description for your pull request or for how to give feedabck](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/)
-- Examples of pull requests:
-  - [Pull request in Fastify.js](https://github.com/fastify/fastify/pull/4264)
-  - [Pull request in GitHub Primer](https://github.com/primer/react/pull/2337)
+-   Use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) for all JavaScript code submitted.
+-   [How to Create a Pull Request | GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+-   [How to write the description for your pull request or for how to give feedback](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/)
+-   Examples of pull requests:
+    -   [Pull request in Fastify.js](https://github.com/fastify/fastify/pull/4264)
+    -   [Pull request in GitHub Primer](https://github.com/primer/react/pull/2337)
