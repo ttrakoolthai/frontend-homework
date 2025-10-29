@@ -8,17 +8,21 @@ function handleKeyDown(event) {
     if (event.key === "Enter") {
         const word = input.value.trim();
 
-        // Reset if empty
+        // Reset if input is empty
         if (!word) {
             textBlock.innerHTML = originalText;
             return;
         }
 
-        // Create case-insensitive regex for whole-word matches
-        const regex = new RegExp(`\\b(${word})\\b`, "gi");
+        // Split text into words, highlight matches, and rejoin
+        const words = originalText.split(/\b/); // split keeping punctuation
+        const highlighted = words
+            .map((w) =>
+                w.toLowerCase() === word.toLowerCase() ? `<mark>${w}</mark>` : w
+            )
+            .join("");
 
-        // Replace matches with highlighted text
-        textBlock.innerHTML = originalText.replace(regex, `<mark>$1</mark>`);
+        textBlock.innerHTML = highlighted;
     }
 }
 
