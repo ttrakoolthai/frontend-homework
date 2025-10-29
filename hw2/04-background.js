@@ -4,12 +4,12 @@ const intervalInput = document.getElementById("intervalInput");
 let interval = null;
 let timer = null;
 
-// Generate a dimmed random RGBA color
+// Generate a random RGBA color
 function randomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    const a = 0.3 + Math.random() * 0.4; // dimmed alpha between 0.3 and 0.7
+    const a = 0.3 + Math.random() * 0.4;
     return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
@@ -20,7 +20,8 @@ function changeBackground() {
 
 // Start the interval
 function startTimer() {
-    if (!interval) return; // do nothing if interval not set
+    // do nothing if interval not set
+    if (!interval) return;
     timer = setInterval(changeBackground, interval);
     toggleBtn.textContent = "Stop";
     toggleBtn.classList.remove("btn-success");

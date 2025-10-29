@@ -1,5 +1,3 @@
-// Add your code here
-
 const input = document.getElementById("userInput");
 const textBlock = document.getElementById("textBlock");
 const originalText = textBlock.innerHTML;
