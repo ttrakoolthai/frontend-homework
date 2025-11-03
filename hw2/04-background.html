@@ -11,17 +11,20 @@
         <script defer src="04-background.js"></script>
     </head>
     <body>
-        <main class="p-4">
-            <h1>Exercise 04 - Background</h1>
+        <main
+            class="container text-left p-4 mt-5 rounded"
+            style="max-width: 600px; background-color: #f0f0f0"
+        >
+            <h1 class="mb-3">Exercise 04 - Background</h1>
             <p>
                 The background color will change every few seconds (as indicated
                 below). You can stop this behavior and you can also change how
                 often the background color changes.
             </p>
-            <div class="mb-2">
+            <div class="mb-4">
                 <label for="intervalInput"
-                    >Background change interval (seconds):
-                </label>
+                    >Background change interval (seconds):</label
+                >
                 <input
                     type="number"
                     id="intervalInput"
@@ -30,7 +33,9 @@
                 />
             </div>
             <div>
-                <button id="toggleBtn" class="btn btn-success">Start</button>
+                <button id="toggleBtn" class="btn btn-success btn-danger">
+                    Stop
+                </button>
             </div>
         </main>
     </body>

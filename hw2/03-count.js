@@ -13,10 +13,12 @@ function handleKeyDown(event) {
         }
 
         // Split text into words, highlight matches, and rejoin
-        const words = originalText.split(/\b/); // split keeping punctuation
+        const words = originalText.split(/\b/);
         const highlighted = words
             .map((w) =>
-                w.toLowerCase() === word.toLowerCase() ? `<mark>${w}</mark>` : w
+                w.toLowerCase() === word.toLowerCase()
+                    ? `<mark style="background-color: yellow; color: black;">${w}</mark>`
+                    : w
             )
             .join("");
 

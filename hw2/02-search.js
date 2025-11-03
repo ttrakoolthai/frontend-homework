@@ -2,6 +2,21 @@ const userInput = document.getElementById("userInput");
 const searchButton = document.getElementById("searchButton");
 const results = document.getElementById("results");
 
+// Pressing 'Enter' triggers a search
+userInput.addEventListener("keydown", (e) => {
+    const char = e.key;
+
+    // Only clear results if the key is a single alphanumeric character
+    if (/^[a-zA-Z0-9]$/.test(char)) {
+        results.innerHTML = "";
+    }
+
+    // Trigger search on Enter
+    if (char === "Enter") {
+        searchButton.click();
+    }
+});
+
 searchButton.addEventListener("click", () => {
     const searchTerm = userInput.value.trim();
 
@@ -50,8 +65,10 @@ searchButton.addEventListener("click", () => {
 
         card.innerHTML = `
             <div class="card-body">
-                <h5 class="card-title">${highlightedName}</h5>
-                <p class="card-text">Birth Year: ${character.birth_year}</p>
+                <h2 class="card-title text-wrap" style="font-size:1.25rem;">
+                    ${highlightedName}
+                </h2>
+                <p class="card-text">Birth year: ${character.birth_year}</p>
             </div>
         `;
 
