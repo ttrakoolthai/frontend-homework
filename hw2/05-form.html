@@ -1,20 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>05 - Form</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-    <script defer src="05-form.js"></script>
-  </head>
-  <body>
-    <main>
-      <form>
-        <h1>Exercise 05 - Form</h1>
-      </form>
-    </main>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>05 - Form</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        />
+        <script defer src="05-form.js"></script>
+    </head>
+    <body style="background-color: #2e2e2e">
+        <main class="d-flex justify-content-center align-items-start p-5">
+            <div
+                class="container-lg bg-white p-4 rounded shadow"
+                style="max-width: 600px"
+            >
+                <h1 class="mb-4 text-center">Exercise 05 - Form</h1>
+                <form id="userForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"
+                            ><strong>Full Name:</strong></label
+                        >
+                        <input type="text" class="form-control" id="name" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"
+                            ><strong>Email:</strong></label
+                        >
+                        <input type="email" class="form-control" id="email" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="status" class="form-label"
+                            ><strong>Registration Status:</strong></label
+                        >
+                        <select class="form-select" id="status">
+                            <option value="">Choose an Option</option>
+                            <option value="not-enrolled">Not enrolled</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="full-time">Full-time</option>
+                        </select>
+                    </div>
+
+                    <!-- Accessible checkbox group -->
+                    <fieldset class="mb-3">
+                        <legend class="form-label small">
+                            <strong
+                                >Have you taken any of the following
+                                courses?</strong
+                            >
+                        </legend>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="Programming Languages"
+                                id="coursePL"
+                            />
+                            <label class="form-check-label" for="coursePL"
+                                >Programming Languages</label
+                            >
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="Operating Systems"
+                                id="courseOS"
+                            />
+                            <label class="form-check-label" for="courseOS"
+                                >Operating Systems</label
+                            >
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="Full Stack Web Development"
+                                id="courseFS"
+                            />
+                            <label class="form-check-label" for="courseFS"
+                                >Full Stack Web Development</label
+                            >
+                        </div>
+                    </fieldset>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label"
+                            ><strong>Anything else?</strong></label
+                        >
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            rows="3"
+                        ></textarea>
+                    </div>
+
+                    <div class="mb-3 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary flex-fill">
+                            Submit
+                        </button>
+                        <button
+                            type="reset"
+                            class="btn btn-secondary flex-fill"
+                        >
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="formModal"
+            tabindex="-1"
+            aria-labelledby="formModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="formModalLabel">
+                            Form Submission
+                        </h2>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body" id="modalBody"></div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
