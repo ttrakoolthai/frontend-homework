@@ -19,6 +19,21 @@ p {
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.country-card {
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
 .donut-chart {
     border-radius: 0.8rem;
     background-color: var(--white);

@@ -27,9 +27,9 @@ export default function Population() {
         axios
             .get("https://restcountries.com/v2/region/americas")
             .then((res) => {
-                const southAmerica = res.data.filter(
-                    (c) => c.subregion === "South America"
-                );
+                const southAmerica = res.data
+                    .filter((c) => c.subregion === "South America")
+                    .sort((a, b) => b.population - a.population); // Sort by population descending
                 setCountries(southAmerica);
             })
             .catch((err) => console.error(err));
@@ -48,10 +48,36 @@ export default function Population() {
         ],
     };
 
+    const options = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: "Population of South American Countries",
+                font: { size: 18 },
+            },
+            legend: {
+                display: false,
+            },
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    callback: (value) => value.toLocaleString(),
+                },
+            },
+        },
+    };
+
     return (
-        <section>
-            <h1>Population Chart</h1>
-            {countries.length === 0 ? <p>Loading...</p> : <Bar data={data} />}
+        <section className="pb-5">
+            <h1 className="text-start">Population Chart</h1>
+            {countries.length === 0 ? (
+                <p>Loading...</p>
+            ) : (
+                <Bar data={data} options={options} />
+            )}
         </section>
     );
 }

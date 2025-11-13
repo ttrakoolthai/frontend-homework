@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Home() {
     return (
-        <section>
-            <h1>Welcome to Homework 3 - React and Charts</h1>
-            <p className="mt-3">This project demonstrates:</p>
+        <section className="pb-5">
+            <h1>Homework 3 - React and Charts</h1>
+            <p className="mt-3">Welcome! This project demonstrates:</p>
             <ul className="list-group list-group-flush mt-2">
                 <li className="list-group-item">React Router navigation</li>
                 <li className="list-group-item">
@@ -14,7 +14,7 @@ export default function Home() {
                     Displaying population charts using Chart.js
                 </li>
                 <li className="list-group-item">
-                    Custom charts and visualizations
+                    Displaying country area charts using Chart.js
                 </li>
             </ul>
             <p className="mt-3">
