@@ -1,0 +1,40 @@
+:root {
+    --black: #020202;
+    --white: #ffffff;
+    --blue: #00425c;
+    --cyan: #17a2b8;
+}
+
+body {
+    background-color: var(--cyan);
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,
+p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.country-card {
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.donut-chart {
+    border-radius: 0.8rem;
+    background-color: var(--white);
+}
